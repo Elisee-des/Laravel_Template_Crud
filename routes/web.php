@@ -27,4 +27,9 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'loginAction')->name('login.action');
 });
 
+
+Route::middleware('auth')->group(function () {
+    Route::get('dashboard', function() { return view('dashboard'); })->name('dashboard');
+});
+
 // Route::get('register', 'AuthController@register')->name('register');
