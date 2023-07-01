@@ -1,0 +1,21 @@
+*Creation de la base de donner
+
+*php artisan make:controller ProductController --resource
+
+*php artisan make:model Product -m
+
+*php artisan migrate
+
+*Dans model completer et metre les attributs en protected
+
+*php artisan make:controller  AuthController
+
+*Creation de la vu dans view pour le register
+
+*Ensuite dans web.app pour la route
+
+*Importation du template et connection des inputs
+
+*Creation de l'utilisation
+
+*
