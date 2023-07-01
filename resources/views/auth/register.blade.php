@@ -40,14 +40,14 @@
                                 @csrf
                                 <div class="form-group">
                                         <input type="text" class="form-control form-control-user @error('name')is-invalid @enderror " id="exampleFirstName"
-                                            placeholder="First Name">
+                                            placeholder="First Name" name="name">
                                             @error('name')
                                                 <span class="invalid-feedback">{{ $message }}</span>
                                             @enderror
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" @error('email')is-invalid @enderror id="exampleInputEmail"
-                                        placeholder="Email Address">
+                                        placeholder="Email Address" name="email">
                                         @error('email')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                         @enderror
@@ -55,15 +55,15 @@
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" class="form-control form-control-user" @error('password')is-invalid @enderror
-                                            id="exampleInputPassword" placeholder="Password">
+                                            id="exampleInputPassword" placeholder="Password" name="password">
                                         @error('password')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                         @enderror
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user @error('password_confirme')is-invalid @enderror"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
-                                        @error('password_confirme')
+                                        <input name="password_confirmation" type="password" class="form-control form-control-user @error('password_confirmation')is-invalid @enderror"
+                                            id="exampleRepeatPassword" placeholder="Repeat Password" name="password_confirme">
+                                        @error('password_confirmation')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                         @enderror
                                     </div>
@@ -74,7 +74,7 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="{{ route('login') }}" href="login.html">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
